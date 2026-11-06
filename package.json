@@ -1,0 +1,28 @@
+{
+  "name": "saif-personal-expense-tracker",
+  "version": "1.0.0",
+  "description": "Saif's Personal Expense Tracker Management System - Track daily income, expense, categorize transactions, set monthly budgets and view spending reports.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "expense-tracker",
+    "express",
+    "mysql",
+    "nodejs",
+    "javascript",
+    "budget-management"
+  ],
+  "author": "Saif Shaik (saifshaik27)",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.12.0"
+  }
+}

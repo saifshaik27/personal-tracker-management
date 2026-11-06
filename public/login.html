@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saif's Personal Expense Tracker - Login & Register</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-body">
+    <div class="auth-container">
+        <!-- Brand Header -->
+        <div class="auth-header">
+            <div class="brand-badge">
+                <i class="fa-solid fa-wallet"></i>
+            </div>
+            <h1>Saif's Personal Expense Tracker</h1>
+            <p class="subtitle">Complete Financial Management &amp; Budget Tracking System</p>
+        </div>
+
+        <!-- Auth Card -->
+        <div class="auth-card">
+            <!-- Tabs -->
+            <div class="auth-tabs">
+                <button class="auth-tab active" id="tab-login" onclick="switchAuthTab('login')">
+                    <i class="fa-solid fa-right-to-bracket"></i> Login
+                </button>
+                <button class="auth-tab" id="tab-register" onclick="switchAuthTab('register')">
+                    <i class="fa-solid fa-user-plus"></i> Register
+                </button>
+            </div>
+
+            <!-- Alert Box -->
+            <div id="auth-alert" class="alert d-none"></div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="login-email"><i class="fa-solid fa-envelope"></i> Email Address</label>
+                    <input type="email" id="login-email" placeholder="name@example.com" required autocomplete="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="login-password"><i class="fa-solid fa-lock"></i> Password</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="login-password" placeholder="Enter your password" required autocomplete="current-password">
+                        <button type="button" class="btn-toggle-pw" onclick="togglePasswordVisibility('login-password')">
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" id="btn-login-submit">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i> Sign In to Dashboard
+                </button>
+
+                <!-- Demo Credentials Fill -->
+                <div class="demo-login-box">
+                    <span>Quick Test Account:</span>
+                    <button type="button" class="btn btn-sm btn-outline" onclick="fillDemoCredentials()">
+                        <i class="fa-solid fa-bolt"></i> Demo Login (Saif)
+                    </button>
+                </div>
+            </form>
+
+            <!-- Register Form -->
+            <form id="register-form" class="auth-form d-none" onsubmit="handleRegister(event)">
+                <div class="form-group">
+                    <label for="reg-name"><i class="fa-solid fa-user"></i> Full Name</label>
+                    <input type="text" id="reg-name" placeholder="e.g. Saif Shaik" required autocomplete="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-email"><i class="fa-solid fa-envelope"></i> Email Address</label>
+                    <input type="email" id="reg-email" placeholder="name@example.com" required autocomplete="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-password"><i class="fa-solid fa-lock"></i> Create Password</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="reg-password" placeholder="At least 6 characters" required autocomplete="new-password">
+                        <button type="button" class="btn-toggle-pw" onclick="togglePasswordVisibility('reg-password')">
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" id="btn-reg-submit">
+                    <i class="fa-solid fa-user-check"></i> Create Account
+                </button>
+            </form>
+        </div>
+
+        <!-- Footer -->
+        <div class="auth-footer">
+            <p>Project Developer: <strong>Saif Shaik</strong> | <a href="https://github.com/saifshaik27" target="_blank"><i class="fa-brands fa-github"></i> github.com/saifshaik27</a></p>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
